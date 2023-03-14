@@ -1,0 +1,2 @@
+DB_URI=<connection string for mongodb>
+DB_NAME=<database name>
