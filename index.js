@@ -4,7 +4,7 @@ async function measureIndexSize(dbUrl, dbName) {
     const client = await MongoClient.connect(dbUrl, { useNewUrlParser: true });
     const db = client.db(dbName)
     const collections = await db.collections();
-   
+    //    loop over collections
     for (const collection of collections) {
         const stats = await collection.stats({indexDetailsKey:true});
         console.log(' - Retrieving indexSizes for collection', collection.collectionName);
